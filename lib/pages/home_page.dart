@@ -8,6 +8,34 @@ class HomePage extends StatelessWidget{
     var height=MediaQuery.of(context).size.height;
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Bloc Backend"),
+        backgroundColor: const Color(0xFFB0BEC5),
+      ),
+      drawer:Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: Container(
+                color: Colors.orange,
+              ),
+            ),
+            ListTile(
+              title: Text("Home"),
+            ),
+            ListTile(
+                title: Text("Profile")
+            ),
+            ListTile(
+                title: Text("My Cart")
+            ),
+            ListTile(
+                title: Text("Logout")
+            )
+          ],
+        ),
+
+      ),
       body: Stack(
         children: [
           Positioned(
